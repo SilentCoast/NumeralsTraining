@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NumeralsTrain">
+
+    <TextView
+        android:id="@+id/txtNumerals"
+        style="@style/TextStyleinTrain"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:text="Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="230dp"
+        android:hint="Number"
+        android:inputType="number"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/buttonNext"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/rounded_corner"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumber"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumber"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonShowNumber"
+        style="@style/TextStyleinTrain"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_corner"
+        android:text="show"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumerals"
+        app:layout_constraintEnd_toEndOf="@+id/txtNumerals"
+        app:layout_constraintStart_toStartOf="@+id/txtNumerals"
+        app:layout_constraintTop_toTopOf="@+id/txtNumerals" />
+
+    <ImageButton
+        android:id="@+id/btnRepeat"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/rounded_corner"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumerals"
+        app:layout_constraintStart_toEndOf="@+id/buttonShowNumber"
+        app:layout_constraintTop_toTopOf="@+id/buttonShowNumber"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+    <ImageButton
+
+        android:id="@+id/btnBackToMainScreen"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/rounded_corner"
+        android:scaleType="fitCenter"
+        android:src="?attr/actionModeCloseDrawable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.numeralstrainer.MChronometer
+        android:id="@+id/mChronometer"
+        style="@style/TextStyleinTrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="00:00:00fghfgh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
