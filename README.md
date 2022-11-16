@@ -1,2 +1,2 @@
 # NumeralsTraining
-You get a voiced number and you need to write it down. Train your hearing
+Train your hearing and understanding of English numerals.
