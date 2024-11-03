@@ -1,7 +1,5 @@
 package com.example.numeralstrainer;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.speech.tts.TextToSpeech;
@@ -10,10 +8,11 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
@@ -31,7 +30,6 @@ private int randomNum;
 private ImageButton btnBackToMainScreen;
 private MChronometer mChronometer;
 int valueOfWordsDone;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,8 +56,6 @@ int valueOfWordsDone;
             }
         });
 
-
-
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
         editTextNumber.requestFocus();
 
@@ -73,16 +69,12 @@ int valueOfWordsDone;
             }
         });
 
-
-
-
         btnRepeat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textToSpeechSystem.speak(txtNumerals.getText().toString(),TextToSpeech.QUEUE_ADD,null);
             }
         });
-
 
         buttonShowNumber.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,8 +84,7 @@ int valueOfWordsDone;
             }
         });
 
-
-        /**next number*/
+        //next number
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,8 +97,6 @@ int valueOfWordsDone;
                 textToSpeechSystem.speak(txtNumerals.getText().toString(),TextToSpeech.QUEUE_ADD,null);
 
                 mChronometer.setBase(SystemClock.elapsedRealtime());
-
-
             }
         });
 
@@ -119,9 +108,6 @@ int valueOfWordsDone;
             }
         });
 
-
-
-    /**ппвпвапвапвап*/
         editTextNumber.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -143,9 +129,5 @@ int valueOfWordsDone;
 
             }
         });
-
-
-
-
     }
 }

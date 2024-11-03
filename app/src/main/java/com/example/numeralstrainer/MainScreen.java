@@ -17,7 +17,6 @@ Button numeralsTrain;
         numeralsTrain = findViewById(R.id.buttonNumeralsTrain);
         Intent intent = new Intent(this,NumeralsTrain.class);
 
-
         numeralsTrain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
